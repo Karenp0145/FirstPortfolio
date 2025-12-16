@@ -30,7 +30,7 @@
     <section class="hero">
         <div class="container">
             <h1>Innovating Through Learning</h1>
-            <p>Développeuse web – crafting ideas into real projects</p>
+            <p>Développeuse web - Approche full-stack orientée expérience utilisateur.</p>
             <a href="#projects" class="cta-button">Découvrir mes projets</a>
         </div>
     </section>
@@ -88,32 +88,98 @@
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">[Projet 1]</div>
-                    <div class="project-content">
-                        <h3>[Nom du Projet 1]</h3>
-                        <p>[Description courte du projet 1]</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
+<!-- ===== TECH STACK SECTION ===== -->
+<section class="tech-stack" id="tech-stack">
+    <div class="container">
+        <h2 class="section-title">Technologies & Outils</h2>
+        
+        <div class="tech-container">
+            <!-- Catégories à gauche -->
+            <div class="tech-categories">
+                <button class="tech-category active" data-category="frontend">
+                    <span>Front-End</span>
+                </button>
+                <button class="tech-category" data-category="backend">
+                    <span>Back-End</span>
+                </button>
+                <button class="tech-category" data-category="design">
+                    <span>Design</span>
+                </button>
+                <button class="tech-category" data-category="ia">
+                    <span>IA</span>
+                </button>
+            </div>
+
+<!-- Compétences à droite -->
+            <div class="tech-content">
+                <div class="tech-items active" id="frontend">
+                    <span class="tech-item" style="background-color: #F7DF1E; color: #000;">JavaScript</span>
+                    <span class="tech-item" style="background-color: #E34F26; color: #fff;">HTML5</span>
+                    <span class="tech-item" style="background-color: #1572B6; color: #fff;">CSS3</span>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">[Projet 2]</div>
-                    <div class="project-content">
-                        <h3>[Nom du Projet 2]</h3>
-                        <p>[Description courte du projet 2]</p>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
+                <div class="tech-items" id="backend">
+                    <span class="tech-item" style="background-color: #339933; color: #fff;">Node.js</span>
+                    <span class="tech-item" style="background-color: #3776AB; color: #fff;">Python</span>
+                </div>
+
+                <div class="tech-items" id="design">
+                    <span class="tech-item" style="background-color: #F24E1E; color: #fff;">Figma</span>
+                    <span class="tech-item" style="background-color: #FF61F6; color: #000;">Adobe XD</span>
+                </div>
+
+                <div class="tech-items" id="ia">
+                    <span class="tech-item" style="background-color: #C17B5F; color: #fff;">Claude</span>
+                    <span class="tech-item" style="background-color: #10A37F; color: #fff;">ChatGPT</span>
+                    <span class="tech-item" style="background-color: #000000; color: #fff;">Midjourney</span>
+                    <span class="tech-item" style="background-color: #2088FF; color: #fff;">GitHub Copilot</span>
+                    <span class="tech-item" style="background-color: #FF6F00; color: #fff;">TensorFlow</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+<section class="projects" id="projects">
+    <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">[Projet 1]</div>
+                <div class="project-content">
+                    <h3>Catch & Kick</h3>
+                    <p>Catch & Kick est un jeu instant gagnant digital 100 % interactif, créé pour une marque afin de dynamiser l'expérience client en magasin.
+                    Réalisé en binôme, j'ai travaillé sur toutes les étapes du projet, de l'UX au design minimaliste style cartoon, en passant par la gamification, la personnalisation des bons et l'intégration technique.
+                    Le jeu combine mini-jeu interactif, gains aléatoires et collecte de données exploitables, tout en offrant transparence, confiance et plaisir aux utilisateurs. 
+                    Ce projet illustre ma capacité à avoir une vision 360° : marketing, design, UX et développement web, et à créer des expériences digitales complètes, ludiques et impactantes.</p>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">[Projet 2]</div>
+                <div class="project-content">
+                    <h3>Weather App</h3>
+                    <p>[Description courte du projet 2]</p>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">[Projet 3]</div>
+                <div class="project-content">
+                    <h3>First Hero Page (Hero Section)</h3>
+                    <p>[Description courte du projet 3]</p>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- ===== CONTACT SECTION / FORM ===== -->
     <section class="contact" id="contact">
@@ -172,6 +238,6 @@
             </div>
         </div>
     </footer>
-
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
