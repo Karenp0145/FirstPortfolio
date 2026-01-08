@@ -554,77 +554,133 @@ body {
         /* TODO MARDI CSS : Ajouter color: #0a84ff; */
     }
 
-    /* ===== CONTACT SECTION / FORM ===== */
-    .contact {
-        background-color: #D4DDD3;
-        padding: 120px 0;
-    }
+/* Section contact */
+.contact-section {
+    min-height: 100vh;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--bg-primary), var(--cream));
+    scroll-snap-align: start;
+}
 
-    .contact h2 {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 60px;
-        letter-spacing: -0.5px;
-    }
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    gap: 80px;
+    margin-top: 80px;
+}
 
-    .contact-form {
-        max-width: 500px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        /* TODO MARDI CSS : Vérifier que c'est du flexbox column */
-    }
+/* Infos */
+.contact-info h3 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
 
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
+.contact-info p {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
 
-    .form-group label {
-        font-weight: 500;
-        font-size: 1rem;
-        color: #1d1d1f;
-    }
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-    .form-group input,
-    .form-group textarea {
-        padding: 12px 16px;
-        border: 1px solid #A8B5A8;
-        border-radius: 8px;
-        font-family: inherit;
-        font-size: 1rem;
-        transition: all 0.3s;
-    }
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+}
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-        /* TODO MARDI CSS : Ajouter outline: none; border-color: #0071e3; */
-    }
+.contact-item svg {
+    color: var(--forest-green);
+}
 
-    .form-group textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
+/* Formulaire */
+.contact-form-wrapper {
+    padding: 50px;
+    background: var(--bg-primary);
+    border: 2px solid var(--beige);
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
 
-    .submit-button {
-        background-color: #5F7161;
-        color: white;
-        padding: 14px;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1.05rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        margin-top: 16px;
-    }
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-    .submit-button:hover {
-        /* TODO MARDI CSS : Ajouter background-color: #0a84ff; */
-    }
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border: 2px solid var(--beige);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: var(--bg-primary);
+    border-color: var(--sage-green);
+    box-shadow: 0 0 0 4px rgba(149, 199, 174, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, var(--forest-green), var(--deep-green));
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(90, 143, 123, 0.3);
+    transition: 0.4s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(90, 143, 123, 0.5);
+}
 
 /* Footer */
 .footer {
@@ -662,6 +718,43 @@ body {
 
 .footer-links a:hover {
     opacity: 1;
+}
+
+/* Notifications */
+.notification-toast {
+    position: fixed;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+    padding: 18px 30px;
+    font: 600 0.95rem var(--font-mono);
+    background: #fff;
+    border: 2px solid var(--beige);
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    transition: bottom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.notification-toast.show {
+    bottom: 40px;
+}
+
+.notification-success,
+.notification-error {
+    background: linear-gradient(135deg, #fff 0%, transparent 100%);
+}
+
+.notification-success {
+    color: var(--forest-green);
+    border-color: var(--sage-green);
+    background: linear-gradient(135deg, #fff, var(--mint-light));
+}
+
+.notification-error {
+    color: #c7554e;
+    border-color: #f5b4ae;
+    background: linear-gradient(135deg, #fff, #ffe5e3);
 }
 
     /* ===== MEDIA QUERIES (RESPONSIVE) ===== */
