@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Karen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="icon" type="image/png" href="./assets/img/froggy.png">
     </head>
@@ -70,33 +75,87 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about" id="apropos">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./assets/img/KarenProust.png" alt="Photo de profil">
-                </div>
+    <!-- ===== ABOUT ===== -->
+    <section id="apropos" class="about-section">
+    <div class="container-fluid about-grid">
 
-                <div class="about-text">
-                    <h2>
-                        Qui suis-je ?
-                    </h2>
-                    <p>
-                            Actuellement en première année à Hetic, je découvre le monde du développement
-                            web avec enthousiasme. Ma curiosité me pousse à apprendre constamment
-                            et à expérimenter avec différentes technologies.
-                    </p>
-                    <p>
-                            Passionnée par le code et la création digitale, je maîtrise HTML, CSS, JavaScript,
-                            Node.js et Python. Chaque projet est une nouvelle opportunité d'apprentissage
-                            et de progression dans mon parcours de développeuse.
-                    </p>
+        <div class="about-text-block">
+            <span class="section-number">01</span>
+
+            <h2 class="section-title">
+                Étudiante passionnée<br>
+                par le <span class="highlight">développement web</span>
+            </h2>
+
+            <p>
+                Actuellement en première année à Hetic, je découvre le monde du développement
+                web avec enthousiasme. Ma curiosité me pousse à apprendre constamment
+                et à expérimenter avec différentes technologies.
+            </p>
+
+            <p>
+                Passionnée par le code et la création digitale, je maîtrise HTML, CSS, JavaScript,
+                Node.js et Python. Chaque projet est une nouvelle opportunité d'apprentissage
+                et de progression dans mon parcours de développeuse.
+            </p>
+
+            <div class="about-documents">
+                <a href="assets/documents/CV_karen_proust.pdf" download class="doc-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    Télécharger mon CV
+                </a>
+
+                <a href="assets/documents/lettre_recommandation.pdf" download class="doc-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    Lettre de recommandation
+                </a>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Année à Hetic</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Technologies maîtrisées</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Projets réalisés</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Image -->
+        <div class="about-image-block">
+            <div class="image-frame">
+                <img src="assets/img/KarenProust.png"
+                     alt="Portrait de Karen Proust, étudiante développeuse web à Hetic"
+                     loading="lazy">
+                <div class="frame-decoration"></div>
+            </div>
+
+            <div class="image-caption">
+                <p>Étudiante à Hetic, France</p>
+                <p>Ouverte aux stages et projets</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
     <!-- ===== SKILLS SECTION ===== -->
     <section class="skills" id="skills">
