@@ -95,3 +95,86 @@ function showNotification(message, type) {
         }, 300);
     }, 4000);
 }
+
+/*  GESTION DU MENU BURGER MOBILE */
+
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+/* ouvrir le MENU BURGER */
+function openMobileMenu() {
+    mobileMenu.classList.add('active');       
+    mobileMenuToggle.classList.add('active'); 
+    document.body.style.overflow = 'hidden';
+}
+
+/* fermer le MENU BURGER */
+function closeMobileMenu() {
+    mobileMenu.classList.remove('active');       
+    mobileMenuToggle.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+/* clic sur le bouton MENU BURGER */
+mobileMenuToggle.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('active')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+});
+
+/* clic sur un lien du MENU BURGER */
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetSection = document.querySelector(link.getAttribute('href'));
+        closeMobileMenu();
+        setTimeout(() => {
+            targetSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+    });
+});
+
+/* clic à l'extérieur du MENU BURGER */
+document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active') &&
+        !mobileMenu.contains(e.target) &&
+        !mobileMenuToggle.contains(e.target)) {
+        closeMobileMenu();
+    }
+});
+
+/* touche escape */
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
+
+
+
+/* MODE NUIT */
+
+const bouton = document.querySelector('.dark-mode-toggle');
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
+
+if (bouton) {
+    bouton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+
+        const mode = document.body.classList.contains('dark-mode') 
+            ? 'enabled' 
+            : 'disabled';
+
+        localStorage.setItem('darkMode', mode);
+    });
+}
+
+
