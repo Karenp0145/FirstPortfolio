@@ -1,4 +1,3 @@
-
 /* GESTION DU FORMULAIRE DE CONTACT */
 
 const form = document.querySelector('.contact-form');
@@ -149,13 +148,12 @@ if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
 }
 
-
 if (bouton) {
     bouton.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
 
 
-        const mode = document.body.classList.contains('dark-mode') 
+        const mode = document.body.classList.contains('dark-mode')
             ? 'enabled' 
             : 'disabled';
 
